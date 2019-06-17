@@ -86,19 +86,19 @@ footer {
 }
 
 .mobile-only {
-	@media screen and (min-width: 1025px) {
+	@media screen and (min-width: $desktop-width) {
 		display: none;
 	}
 }
 
 .desktop-only {
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: $mobile-width) {
 		display: none;
 	}
 }
 
 #hero-area {
-	height: 45rem;
+	padding-bottom: 250px;
 	display: flex;
 	flex-direction: column;
 	background: $accent; /* fallback for old browsers */
@@ -115,10 +115,6 @@ footer {
 	clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
 	height: 25rem;
 	padding-top: 50px;
-}
-
-#mobile-menu {
-	padding: 25px;
 }
 
 .btn {
@@ -197,13 +193,30 @@ footer {
 }
 
 .mobile-menu {
-	.mobile-menu-button {
-		&:active {
-			
+	display: flex;
+	flex-direction: column;
+	#menu-toggle {
+		display: none;
+
+		&:checked + .mobile-menu-items {
+			display: block;
 		}
 	}
 
-	.mobile-menu-items {
+	label {
+		cursor: pointer;
+		align-self: flex-end;
+		margin-right: 50px;
+		margin-top: 25px;
 		
+	}
+
+	.mobile-menu-items {
+		display: none;
+		a {
+			text-align: center;
+			display: block;
+			border-bottom: 1px solid $shadow;
+		}
 	}
 }

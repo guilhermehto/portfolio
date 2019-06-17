@@ -9,14 +9,15 @@
                     rel="noopener noreferrer" href="https://github.com/guilhermehto">github</a> | resume </div>
         </div>
 
-        <div id="mobile-menu" class="container between mobile-only">
-            <div>
-                <h1>GO</h1>
-            </div>
+        <div class="mobile-only">
             <div class="mobile-menu">
-                <i class="fas fa-2x fa-bars mobile-menu-button"></i>
+                <label for="menu-toggle"><i class="fas fa-2x fa-bars"></i></label>
+                <input id="menu-toggle" type="checkbox" />
                 <div class="mobile-menu-items">
-
+                    <a href="#projects">projects</a>
+                    <a href="#contact">contact</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/guilhermehto">github</a>
+                    <a href="#">resume</a>
                 </div>
             </div>
         </div>
@@ -78,11 +79,24 @@
             </div>
         </div>
     </section>
-    
+
     <section id="contact">
         <div class="container col fixed">
             <h2 class="center">contact</h2>
         </div>
     </section>
 </main>
+
+<script>
+    window.onload = () => {
+        let menuActive = false
+        const menuToggle = document.querySelector(".mobile-menu label")
+        menuToggle.addEventListener("click", () => {
+            menuActive = !menuActive
+            menuToggle.innerHTML = menuActive
+                ? `<i class="fas fa-2x fa-times"></i>`
+                : `<i class="fas fa-2x fa-bars"></i>`
+        })
+    }
+</script>
 {{ end }}

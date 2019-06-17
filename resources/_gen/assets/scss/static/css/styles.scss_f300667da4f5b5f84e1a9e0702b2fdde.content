@@ -69,7 +69,7 @@ footer {
     display: none; } }
 
 #hero-area {
-  height: 45rem;
+  padding-bottom: 250px;
   display: flex;
   flex-direction: column;
   background: #8e2de2;
@@ -86,9 +86,6 @@ footer {
   clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
   height: 25rem;
   padding-top: 50px; }
-
-#mobile-menu {
-  padding: 25px; }
 
 .btn {
   border: none;
@@ -142,3 +139,22 @@ footer {
       justify-content: start; }
       .card .card-footer .card-links a {
         margin-right: 15px; }
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column; }
+  .mobile-menu #menu-toggle {
+    display: none; }
+    .mobile-menu #menu-toggle:checked + .mobile-menu-items {
+      display: block; }
+  .mobile-menu label {
+    cursor: pointer;
+    align-self: flex-end;
+    margin-right: 50px;
+    margin-top: 25px; }
+  .mobile-menu .mobile-menu-items {
+    display: none; }
+    .mobile-menu .mobile-menu-items a {
+      text-align: center;
+      display: block;
+      border-bottom: 1px solid #323232; }
