@@ -13,16 +13,24 @@
             <div class="mobile-menu">
                 <label for="menu-toggle"><i class="fas fa-2x fa-bars"></i></label>
                 <input id="menu-toggle" type="checkbox" />
-                <div class="mobile-menu-items">
-                    <a href="#projects">projects</a>
-                    <a href="#contact">contact</a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/guilhermehto">github</a>
-                    <a href="#">resume</a>
-                </div>
+                <ul class="mobile-menu-items">
+                    <li>
+                        <a href="#projects">projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">contact</a>
+                    </li>
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/guilhermehto">github</a>
+                    </li>
+                    <li>
+                        <a href="#">resume</a>
+                    </li>
+                </ul>
             </div>
         </div>
 
-        <div class="center">
+        <div class="center" id="main-heading">
             <h1>guilherme oliveira</h1>
             <h3>full stack developer by day - game dev by night</h3>
             <button class="btn">projects</button>
@@ -90,12 +98,23 @@
 <script>
     window.onload = () => {
         let menuActive = false
+        const mobileMenu = document.querySelector(".mobile-menu")
         const menuToggle = document.querySelector(".mobile-menu label")
         menuToggle.addEventListener("click", () => {
             menuActive = !menuActive
             menuToggle.innerHTML = menuActive
                 ? `<i class="fas fa-2x fa-times"></i>`
                 : `<i class="fas fa-2x fa-bars"></i>`
+            switch (menuActive) {
+                case true:
+                    mobileMenu.classList.add('fall-down')
+                    break;
+                case false:
+                    mobileMenu.classList.remove('fall-down')
+                    break;
+
+            }
+
         })
     }
 </script>
