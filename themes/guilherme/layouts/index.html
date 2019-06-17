@@ -1,0 +1,88 @@
+{{ define "main" }}
+<header>
+    <div id="hero-area" class="container">
+        <div class="container fixed between desktop-only">
+            <div>
+                <h3>GO</h3>
+            </div>
+            <div><a href="#projects">projects</a> | <a href="#contact">contact</a> | <a target="_blank"
+                    rel="noopener noreferrer" href="https://github.com/guilhermehto">github</a> | resume </div>
+        </div>
+
+        <div id="mobile-menu" class="container between mobile-only">
+            <div>
+                <h1>GO</h1>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-2x fa-bars mobile-menu-button"></i>
+                <div class="mobile-menu-items">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="center">
+            <h1>guilherme oliveira</h1>
+            <h3>full stack developer by day - game dev by night</h3>
+            <button class="btn">projects</button>
+        </div>
+    </div>
+</header>
+<main>
+    <section id="projects">
+        <div class="container col fixed">
+            <h2 class="center">projects</h2>
+            <div class="container wrap even">
+                <div class="card">
+                    <div class="card-title">
+                        <h3>Life Statatraak</h3>
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-node-js"></i>
+                        <i class="fab fa-js-square"></i>
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Pwa which allow users to enter information regarding their personal life.</p>
+                        <p>The objective is to then use this data to get insights on your life and reach personal goals.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-links">
+                            <a href="/"><span><i class="fab fa-github"></i></span> Code</a>
+                            <a href="/"><span><i class="fas fa-external-link-alt"></i></span> Access</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">
+                        <h3>Life Statatraak</h3>
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-node-js"></i>
+                        <i class="fab fa-js-square"></i>
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Pwa which allow users to enter information regarding their personal life.</p>
+                        <p>The objective is to then use this data to get insights on your life and reach personal goals.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-links">
+                            <a href="/"><span><i class="fab fa-github"></i></span> Code</a>
+                            <a href="/"><span><i class="fas fa-external-link-alt"></i></span> Access</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container col fixed">
+            <h2 class="center">contact</h2>
+        </div>
+    </section>
+</main>
+{{ end }}
