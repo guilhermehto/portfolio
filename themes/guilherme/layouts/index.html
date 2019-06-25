@@ -40,15 +40,29 @@
 <main>
     <section id="projects">
         <div class="container col fixed">
-            <h2 class="center">projects</h2>
+            <h2 class="center margin-bottom">projects</h2>
             <div class="container wrap even">
                 <div class="card">
                     <div class="card-title">
                         <h3>Life Statatraak</h3>
-                        <i class="fab fa-html5"></i>
-                        <i class="fab fa-node-js"></i>
-                        <i class="fab fa-js-square"></i>
-                        <i class="fas fa-database"></i>
+                        <i class="fab fa-html5 tooltip">
+                            <span class="tooltiptext">HTML 5</span>
+                        </i>
+                        <i class="tooltip fab fa-node-js">
+                            <span class="tooltiptext">NodeJS</span>
+                        </i>
+                        <i class="tooltip fab fa-js-square">
+                            <span class="tooltiptext">Javascript</span>
+                        </i>
+                        <i class="tooltip devicon-typescript-plain">
+                            <span class="tooltiptext">Typescript</span>
+                        </i>
+                        <i class="tooltip devicon-mongodb-plain">
+                            <span class="tooltiptext">MongoDB</span>
+                        </i>
+                        <i class="tooltip devicon-express-original">
+                            <span class="tooltiptext">Express</span>
+                        </i>
                     </div>
                     <div class="card-content">
                         <p>Pwa which allow users to enter information regarding their personal life.</p>
@@ -65,21 +79,75 @@
 
                 <div class="card">
                     <div class="card-title">
-                        <h3>Life Statatraak</h3>
-                        <i class="fab fa-html5"></i>
-                        <i class="fab fa-node-js"></i>
-                        <i class="fab fa-js-square"></i>
-                        <i class="fas fa-database"></i>
+                        <h3>Toggl Invoice Generator</h3>
+                        <i class="fab fa-python tooltip">
+                            <span class="tooltiptext">Python</span>
+                        </i>
+                        <i class="fab fa-html5 tooltip">
+                            <span class="tooltiptext">HTML 5</span>
+                        </i>
                     </div>
                     <div class="card-content">
-                        <p>Pwa which allow users to enter information regarding their personal life.</p>
-                        <p>The objective is to then use this data to get insights on your life and reach personal goals.
-                        </p>
+                        <p>CLI tool used to generate HTML invoices from hours logged on Toggl.</p>
                     </div>
                     <div class="card-footer">
                         <div class="card-links">
                             <a href="/"><span><i class="fab fa-github"></i></span> Code</a>
-                            <a href="/"><span><i class="fas fa-external-link-alt"></i></span> Access</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">
+                        <h3>Teixeira Real State</h3>
+                        <i class="fab fa-html5 tooltip">
+                            <span class="tooltiptext">HTML 5</span>
+                        </i>
+                        <i class="fab fa-js-square tooltip">
+                            <span class="tooltiptext">Javascript</span>
+                        </i>
+                        <i class="devicon-dot-net-plain tooltip">
+                            <span class="tooltiptext">ASP.NET</span>
+                        </i>
+                        <i class="devicon-csharp-plain tooltip">
+                            <span class="tooltiptext">C#</span>
+                        </i>
+                        <i class="fas fa-database tooltip">
+                            <span class="tooltiptext">SQL Server</span>
+                        </i>
+                    </div>
+                    <div class="card-content">
+                        <p>Real state website which provides users with an admin panel where they're able to create blog posts and manage properties. Unfortunately, not open source.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-links">
+                            <a href="https://teixeira-imobiliaria.com"><span><i class="fas fa-external-link-alt"></i></span> Access</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">
+                        <h3>Portfolio</h3>
+                        <i class="fab fa-html5 tooltip">
+                            <span class="tooltiptext">HTML 5</span>
+                        </i>
+                        <i class="fab fa-js-square tooltip">
+                            <span class="tooltiptext">Javascript</span>
+                        </i>
+                        <i class="devicon-go-plain tooltip">
+                            <span class="tooltiptext">GO/Hugo</span>
+                        </i>
+                        <i class="devicon-sass-original tooltip">
+                            <span class="tooltiptext">Sass</span>
+                        </i>
+                    </div>
+                    <div class="card-content">
+                        <p>This website is open source and made using hugo! Feel free to use the theme.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-links">
+                            <a href="/"><span><i class="fab fa-github"></i></span> Code</a>
                         </div>
                     </div>
                 </div>
@@ -112,7 +180,6 @@
                 case false:
                     mobileMenu.classList.remove('fall-down')
                     break;
-
             }
 
         })
