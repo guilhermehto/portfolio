@@ -93,6 +93,10 @@ footer {
 	margin-bottom: 35px;
 }
 
+.hidden {
+	visibility: hidden;
+}
+
 .mobile-only {
 	@media screen and (min-width: $desktop-width) {
 		display: none;

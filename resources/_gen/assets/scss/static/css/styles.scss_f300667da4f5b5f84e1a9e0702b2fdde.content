@@ -68,6 +68,9 @@ footer {
 .margin-bottom {
   margin-bottom: 35px; }
 
+.hidden {
+  visibility: hidden; }
+
 @media screen and (min-width: 1025px) {
   .mobile-only {
     display: none; } }
