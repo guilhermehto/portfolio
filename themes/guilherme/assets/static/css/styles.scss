@@ -23,7 +23,6 @@ section {
 footer {
 	background-color: $accent;
 	padding: 15px 0 15px;
-	margin-top: 150px;
 }
 
 .navbar {
@@ -35,10 +34,7 @@ footer {
 
 .container {
 	display: flex;
-	&.col {
-		flex-direction: column;
-	}
-
+	flex-wrap: wrap;
 	&.fixed {
 		@media screen and (min-width: 1280px) {
 			width: 1280px;
@@ -56,10 +52,6 @@ footer {
 		justify-content: space-evenly;
 	}
 
-	&.wrap {
-		flex-wrap: wrap;
-	}
-
 	&.end {
 		justify-content: end;
 	}
@@ -67,6 +59,14 @@ footer {
 	&.between {
 		justify-content: space-between;
 	}
+}
+
+.col {
+	flex-direction: column;
+}
+
+.row {
+	flex-direction: row;
 }
 
 .center {
@@ -131,9 +131,14 @@ footer {
 
 #contact {
 	background-image: linear-gradient(to top, #6a11cb 0%, #2575fc 100%);
-	clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
-	height: 25rem;
+	clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
 	padding-top: 50px;
+	padding-bottom: 150px;
+}
+
+#form-validation-message {
+	color: $danger;
+	visibility: hidden;
 }
 
 .btn {
@@ -149,6 +154,10 @@ footer {
 	animation: btnActive 60ms forwards;
 	position: relative;
 
+	&.small {
+		padding: 0;
+	}
+	
 	&:hover {
 		animation: btnHover 60ms forwards;
 	}
@@ -156,6 +165,8 @@ footer {
 	&:active {
 		animation: btnActive 60ms forwards;
 	}
+
+	
 }
 
 @keyframes btnHover {
@@ -173,6 +184,18 @@ footer {
 	}
 	to {
 		top: 0;
+	}
+}
+
+form {
+	display: flex;
+	.form-item {
+		margin: 10px;
+		.form-input {
+			width: 100%;
+			border-radius: 5px;
+			font-size: 1em;
+		}
 	}
 }
 
@@ -290,5 +313,4 @@ footer {
 	&:hover .tooltiptext {
 		visibility: visible;
 	}
-
 }

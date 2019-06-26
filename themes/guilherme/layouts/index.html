@@ -117,11 +117,13 @@
                         </i>
                     </div>
                     <div class="card-content">
-                        <p>Real state website which provides users with an admin panel where they're able to create blog posts and manage properties. Unfortunately, not open source.</p>
+                        <p>Real state website which provides users with an admin panel where they're able to create blog
+                            posts and manage properties. Unfortunately, not open source.</p>
                     </div>
                     <div class="card-footer">
                         <div class="card-links">
-                            <a href="https://teixeira-imobiliaria.com"><span><i class="fas fa-external-link-alt"></i></span> Access</a>
+                            <a href="https://teixeira-imobiliaria.com"><span><i
+                                        class="fas fa-external-link-alt"></i></span> Access</a>
                         </div>
                     </div>
                 </div>
@@ -158,7 +160,29 @@
 
     <section id="contact">
         <div class="container col fixed">
-            <h2 class="center">contact</h2>
+            <h2 class="center margin-bottom">contact</h2>
+            <h5 id="form-validation-message" class="center">All fields are required.</h5>
+            <form id="contact-form" action="https://getform.io/f/d8123212-b5f1-477d-849f-ca0c4f69d681" method="POST">
+                <div class="container row center even wrap">
+                    <div class="container col">
+                        <div class="form-item">
+                            <label for="name">Name</label>
+                            <input class="form-input" type="text" name="name">
+                        </div>
+                        <div class="form-item">
+                            <label for="email">Email</label>
+                            <input class="form-input" type="email" name="email">
+                        </div>
+                    </div>
+                    <div class="container col">
+                        <div class="form-item">
+                            <label for="message">Message</label>
+                            <textarea class="form-input" name="message"></textarea>
+                        </div>
+                        <button type="submit" class="form-item btn small">Send</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </section>
 </main>
@@ -184,5 +208,17 @@
 
         })
     }
+
+    document.getElementById("contact-form").addEventListener("submit", (event) => {
+        
+        const name = document.getElementsByName("name")[0].value
+        const email = document.getElementsByName("email")[0].value
+        const message = document.getElementsByName("message")[0].value
+
+        if (name.length == 0 || email.length == 0 || message.length == 0) {
+            document.getElementById("form-validation-message").style.visibility = "visible"
+            event.preventDefault()
+        }
+    })
 </script>
 {{ end }}
