@@ -5,6 +5,10 @@
 	font-family: "Prompt", sans-serif;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: $primary-dark;
 	color: $primary-white;

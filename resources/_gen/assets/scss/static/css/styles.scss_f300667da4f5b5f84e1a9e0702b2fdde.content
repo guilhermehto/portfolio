@@ -3,6 +3,9 @@
   margin: 0;
   font-family: "Prompt", sans-serif; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   background-color: #1b2a42;
   color: #ebebeb;
