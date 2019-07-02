@@ -12,7 +12,7 @@ body {
   font-size: 1.5em; }
   @media screen and (max-width: 1024px) {
     body {
-      font-size: 2em; } }
+      font-size: 3rem; } }
 
 a {
   color: #ebebeb;
@@ -89,11 +89,19 @@ footer {
   background: #8e2de2;
   /* fallback for old browsers */
   background-image: linear-gradient(to top, #6a11cb 0%, #2575fc 100%);
-  clip-path: polygon(0 0%, 100% 0, 100% 80%, 0% 100%);
   color: #ebebeb;
   text-align: center;
-  line-height: 4em;
-  letter-spacing: 3px; }
+  line-height: 3em;
+  letter-spacing: 2px; }
+  @media screen and (min-width: 1025px) {
+    #hero-area {
+      clip-path: polygon(0 0%, 100% 0, 100% 80%, 0% 100%); } }
+  @media screen and (max-width: 1024px) {
+    #hero-area {
+      clip-path: polygon(0 0%, 100% 0, 100% 90%, 0% 100%); } }
+  #hero-area h3 {
+    padding-left: 15px;
+    padding-right: 15px; }
 
 #main-heading {
   animation: headingAppear 1000ms; }
@@ -107,9 +115,14 @@ footer {
 
 #contact {
   background-image: linear-gradient(to top, #6a11cb 0%, #2575fc 100%);
-  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
   padding-top: 50px;
   padding-bottom: 150px; }
+  @media screen and (min-width: 1025px) {
+    #contact {
+      clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%); } }
+  @media screen and (max-width: 1024px) {
+    #contact {
+      clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%); } }
 
 #form-validation-message {
   color: #f74058;
@@ -172,10 +185,10 @@ form {
       max-width: 450px; } }
   .card .card-title {
     text-align: left;
-    padding: 15px; }
+    padding: 20px; }
   .card .card-content {
     text-align: justify;
-    padding: 15px; }
+    padding: 20px; }
   .card .card-footer {
     background-color: #8e2de2;
     padding: 15px;
