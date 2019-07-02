@@ -13,6 +13,9 @@ body {
 	background-color: $primary-dark;
 	color: $primary-white;
 	font-size: 1.5em;
+	@media screen and (max-width: $mobile-width) {
+		font-size: 2em;
+	}
 }
 
 a {
@@ -102,6 +105,8 @@ footer {
 		display: none;
 	}
 }
+
+
 
 .desktop-only {
 	@media screen and (max-width: $mobile-width) {
@@ -215,7 +220,14 @@ form {
 	box-shadow: 0 0.2em 0.5em $shadow;
 	display: flex;
 	flex-direction: column;
-	max-width: 450px;
+	@media screen and (max-width: $mobile-width) {
+		max-width: 95%;
+	}
+	
+	@media screen and (min-width: $desktop-width) {
+		max-width: 450px;
+	}
+
 	justify-content: space-between;
 
 	.card-title {

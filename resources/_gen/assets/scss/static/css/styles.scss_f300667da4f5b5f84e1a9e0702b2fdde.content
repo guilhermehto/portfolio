@@ -10,6 +10,9 @@ body {
   background-color: #1b2a42;
   color: #ebebeb;
   font-size: 1.5em; }
+  @media screen and (max-width: 1024px) {
+    body {
+      font-size: 2em; } }
 
 a {
   color: #ebebeb;
@@ -160,8 +163,13 @@ form {
   box-shadow: 0 0.2em 0.5em #323232;
   display: flex;
   flex-direction: column;
-  max-width: 450px;
   justify-content: space-between; }
+  @media screen and (max-width: 1024px) {
+    .card {
+      max-width: 95%; } }
+  @media screen and (min-width: 1025px) {
+    .card {
+      max-width: 450px; } }
   .card .card-title {
     text-align: left;
     padding: 15px; }
