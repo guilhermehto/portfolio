@@ -1,8 +1,15 @@
 ## Guilherme Oliveira's Portfolio
 
+Access it [here](https://guilhermehto.dev).
+
 To run the project:
-    1. Install [Hugo](https://gohugo.io/getting-started/quick-start/)
-    2. Clone this repository
-    3. `$ cd ~/portfolio`
-    4. `$ hugo server -D`
-    5. Navigate to `localhost:1313`
+
+-   Install [Hugo](https://gohugo.io/getting-started/quick-start/)
+
+-   Clone this repository
+
+-   `$ cd ~/portfolio`
+
+-   `$ hugo server -D`
+
+-   Navigate to `localhost:1313`
