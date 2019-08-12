@@ -196,4 +196,7 @@
 {{ $mobileMenuController := resources.Get "static/js/mobileMenuController.js" }}
 <script src="{{ $mobileMenuController.RelPermalink }}"></script>
 
+{{ $contactFormHandler := resources.Get "static/js/contactFormHandler.js" }}
+<script src="{{ $contactFormHandler.RelPermalink }}"></script>
+
 {{ end }}
