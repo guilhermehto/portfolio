@@ -1,5 +1,8 @@
 <head>
     <title>Guilherme Oliveira</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145479440-1"></script>
+    {{ $googleAnalytics := resources.Get "static/js/googleAnalytics.js" }}
+    <script src="{{ $googleAnalytics.RelPermalink }}"></script>
     <link href="https://fonts.googleapis.com/css?family=Prompt:500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link rel="stylesheet"
