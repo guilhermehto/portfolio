@@ -149,7 +149,8 @@
                     </div>
                     <div class="card-footer">
                         <div class="card-links">
-                            <a href="https://github.com/guilhermehto/portfolio"><span><i class="fab fa-github"></i></span> Code</a>
+                            <a href="https://github.com/guilhermehto/portfolio"><span><i
+                                        class="fab fa-github"></i></span> Code</a>
                         </div>
                     </div>
                 </div>
@@ -187,38 +188,12 @@
     </section>
 </main>
 
-<script>
-    window.onload = () => {
-        let menuActive = false
-        const mobileMenu = document.querySelector(".mobile-menu")
-        const menuToggle = document.querySelector(".mobile-menu label")
-        menuToggle.addEventListener("click", () => {
-            menuActive = !menuActive
-            menuToggle.innerHTML = menuActive
-                ? `<i class="fas fa-2x fa-times"></i>`
-                : `<i class="fas fa-2x fa-bars"></i>`
-            switch (menuActive) {
-                case true:
-                    mobileMenu.classList.add('fall-down')
-                    break;
-                case false:
-                    mobileMenu.classList.remove('fall-down')
-                    break;
-            }
 
-        })
-    }
+{{ end }}
 
-    document.getElementById("contact-form").addEventListener("submit", (event) => {
-        
-        const name = document.getElementsByName("name")[0].value
-        const email = document.getElementsByName("email")[0].value
-        const message = document.getElementsByName("message")[0].value
+{{ define "scripts" }}
 
-        if (name.length == 0 || email.length == 0 || message.length == 0) {
-            document.getElementById("form-validation-message").style.visibility = "visible"
-            event.preventDefault()
-        }
-    })
-</script>
+{{ $mobileMenuController := resources.Get "static/js/mobileMenuController.js" }}
+<script src="{{ $mobileMenuController.RelPermalink }}"></script>
+
 {{ end }}
