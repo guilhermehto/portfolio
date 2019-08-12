@@ -199,4 +199,7 @@
 {{ $contactFormHandler := resources.Get "static/js/contactFormHandler.js" }}
 <script src="{{ $contactFormHandler.RelPermalink }}"></script>
 
+{{ $hotjar := resources.Get "static/js/hotjar.js" }}
+<script src="{{ $hotjar.RelPermalink }}"></script>
+
 {{ end }}
